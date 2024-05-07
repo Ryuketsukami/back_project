@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-dnkh@$=ia9xjckod7@wp_xu1h*+ve_s@=rw3_t!t&8vf+*w7%@
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = [".awsapprunner.com"]
+ALLOWED_HOSTS = [".awsapprunner.com", "back-project-ozs7.onrender.com", ".onrender.com"]
 
 
 # Application definition
@@ -141,6 +141,7 @@ REST_FRAMEWORK = {
     ]
 }
 
+# Needed for Aws apprunner
 
 STORAGES = {
     "default": {
