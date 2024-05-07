@@ -17,11 +17,12 @@ Including another URLconf
 from django.contrib import admin
 from rest_framework.authtoken import views
 from django.urls import path, include
-from .views import render_home, create_user
+from .views import render_home, create_user, CreateUserView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('createuser/', create_user),
+    # path('createuser/', create_user),
+    path('create-user/', CreateUserView.as_view(), name='create-user'),
     path('api-token-auth/', views.obtain_auth_token),
     # Allan mapping
     path('message/', include("messages_app.urls")),
