@@ -26,6 +26,7 @@ def write_messsage(request):
         return JsonResponse({'error': 'Invalid Authorization header format'}, status=400)
 
     if not data.get('sender') or not data.get('receiver'):
+        # check if sender is authorized, check if both sender and receiver exist
         return JsonResponse({'error': 'Invalid sender or receiver'}, status=400)
     
     if not data.get('message') or not data.get('subject') or len(data.get('subject')) > 128:
@@ -107,6 +108,7 @@ def read_message(request, username):
         return JsonResponse({'error': str(e)}, status=400)
     except Exception as e:
         return JsonResponse({'error': f'An error occurred while retrieving messages: {e}'}, status=500)
+
 
 def delete_message(request):
 
