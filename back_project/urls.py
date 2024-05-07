@@ -22,7 +22,7 @@ from .views import render_home, create_user
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('createuser/', create_user),
-    path('api-token-auth/', views.obtain_auth_token)
+    path('api-token-auth/', views.obtain_auth_token),
     # Allan mapping
     path('message/', include("messages_app.urls")),
     path('', render_home),
