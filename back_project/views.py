@@ -32,6 +32,7 @@ def create_user (request):
         return JsonResponse({'error': 'Missing parameters in body'}, status=400)
     
     try:
+        return HttpResponse("we are here and its messed up")
         User.objects.create_user(
             username=username,
             email=email,
