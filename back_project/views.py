@@ -23,6 +23,8 @@ def render_home (request) :
     # string as HttpResponse
     return HttpResponse("This is the home page!")
 
+
+
 def create_user (request):
 
     if request.method != 'POST':
