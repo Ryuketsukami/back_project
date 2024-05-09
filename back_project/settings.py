@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-dnkh@$=ia9xjckod7@wp_xu1h*+ve_s@=rw3_t!t&8vf+*w7%@
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [".awsapprunner.com", "back-project-ozs7.onrender.com", ".onrender.com"]
+ALLOWED_HOSTS = [".awsapprunner.com", "back-project-ozs7.onrender.com", ".onrender.com", "localhost"]
 
 
 # Application definition
@@ -164,7 +164,7 @@ STORAGES = {
 }
 
 SIMPLE_JWT = {
-    'ACCESS_TOKEN_LIFETIME': timedelta(minutes=60),
+    'ACCESS_TOKEN_LIFETIME': timedelta(days=1),
     'SLIDING_TOKEN_REFRESH_LIFETIME': timedelta(days=1),
     'SLIDING_TOKEN_LIFETIME': timedelta(days=30),
     'SLIDING_TOKEN_REFRESH_LIFETIME_LATE_USER': timedelta(days=1),
