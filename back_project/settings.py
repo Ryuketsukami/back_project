@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-dnkh@$=ia9xjckod7@wp_xu1h*+ve_s@=rw3_t!t&8vf+*w7%@
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [".awsapprunner.com", "back-project-ozs7.onrender.com", ".onrender.com", "localhost"]
+ALLOWED_HOSTS = [".awsapprunner.com", "back-project-ozs7.onrender.com", ".onrender.com", "localhost", "safe-cove-10193-09417b1d6caf.herokuapp.com/", ".herokuapp.com/"]
 
 
 # Application definition
