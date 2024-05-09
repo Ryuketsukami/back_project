@@ -8,4 +8,4 @@ from rest_framework.views import APIView
 def render_home (request) :
 
     # string as HttpResponse
-    return HttpResponse("This is the home page!")
+    return HttpResponse("Website started!")

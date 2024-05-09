@@ -20,7 +20,6 @@ from .views import render_home
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-
     path('auth/', include("authentication_app.urls")),
     path('message/', include("messages_app.urls")),
     path('', render_home),
