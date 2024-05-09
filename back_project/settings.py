@@ -29,7 +29,16 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 DEBUG = True
 
 SECRET_KEY = os.environ.get('SECRET_KEY')
-DATABASES = os.environ.get('DATABASES')
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'postgres',
+        'USER': 'usermasteruser',
+        'PASSWORD': 'messagemessage',
+        'HOST': 'db-messages-assignment.cp2guik28n5o.us-east-1.rds.amazonaws.com',
+        'PORT': '5432'
+    }
+}
 
 ALLOWED_HOSTS = [".awsapprunner.com", "back-project-ozs7.onrender.com", ".onrender.com", "localhost", "safe-cove-10193-09417b1d6caf.herokuapp.com/", ".herokuapp.com/"]
 
