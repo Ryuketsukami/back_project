@@ -12,6 +12,10 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 
 from pathlib import Path
 from datetime import timedelta
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -23,6 +27,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
+
+SECRET_KEY = os.environ.get('SECRET_KEY')
+DATABASES = os.environ.get('DATABASES')
 
 ALLOWED_HOSTS = [".awsapprunner.com", "back-project-ozs7.onrender.com", ".onrender.com", "localhost", "safe-cove-10193-09417b1d6caf.herokuapp.com/", ".herokuapp.com/"]
 
